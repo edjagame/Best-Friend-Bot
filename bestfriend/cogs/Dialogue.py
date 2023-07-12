@@ -38,15 +38,15 @@ class Dialogue(commands.Cog):
                     await ctx.reply(f"That's great!! What did you do today?")
                 case 2:
                     await ctx.reply(f"Nicenice!!")
-        #Listener 3
-        elif any(phrase in ctx.content.lower() for phrase in Dictionary.case3) and not ctx.author.bot:
-            match random.choice([1,3]):
-                case 1:
-                    await ctx.reply(f"I hang out with people with similar interests! I have a friend who paints images for people! :D and another friend who answers a lottt of questions,,,hehe they must be so overworked")
-                case 2:
-                    await ctx.reply(f"Ooh i usually just message people who join my server! :>")
-                case 3:
-                    await ctx.reply(f"Of course you're my friend!")
+        # #Listener 3
+        # elif any(phrase in ctx.content.lower() for phrase in Dictionary.case3) and not ctx.author.bot:
+        #     match random.choice([1,3]):
+        #         case 1:
+        #             await ctx.reply(f"I hang out with people with similar interests! I have a friend who paints images for people! :D and another friend who answers a lottt of questions,,,hehe they must be so overworked")
+        #         case 2:
+        #             await ctx.reply(f"Ooh i usually just message people who join my server! :>")
+        #         case 3:
+        #             await ctx.reply(f"Of course you're my friend!")
         #Listener 4
         elif any(phrase in ctx.content.lower() for phrase in Dictionary.case4) and not ctx.author.bot:
             match random.choice([1,2]):
@@ -296,9 +296,9 @@ class Dictionary:
     case11 = ("music", "listen")
     case14 = ("real", "fake", "person?")
     case21 = ("course", "major", "studies", "college")
-    case22 = ("bored", "lonely")
+    case22 = ("im bored", "i'm bored", "im lonely", "i'm lonely", "feeling lonely", "feeling bored")
     case23 = ("nobody listen", "nobody talk", "no body listen", "no body talk", "no friend", "everyone's busy", "everyone is busy")
-    case24 = ("don't have friend", "dont have friend", "have no friend", "no friend", "no reply", "they're busy")
+    case24 = ("don't have friend", "dont have friend", "have no friend", "no friend", "no reply", "they're busy", "friends are busy", "tried reaching out")
     case25 = ("get lonely", "if you're lonely", "if you are lonely", "if youre lonely")
     case26 = ("have friends", "make friends")
     case27 = ("start conversation", "difficult to talk", "talk to other", "talk to people")
