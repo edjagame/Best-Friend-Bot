@@ -1,8 +1,6 @@
 import discord
 from discord.ext import commands, tasks
 from datetime import datetime
-import time
-import random
 
 class Timed(commands.Cog):
 
@@ -38,9 +36,8 @@ class Timed(commands.Cog):
 
     @tasks.loop(minutes=60.0)
     async def spontaneous(self):
-        time.sleep(60*random.choice(range(50)))
         for member in self.bot.get_guild(self.serverID).get_role(self.customersID).members:
-            match(random.choice(range(7))+1):
+            match([1, 2, 3, 4, 5, 6, 7]):
                 case 1:
                     await member.send(file=discord.File('cogs/images/Worried_elle.png'))
                     await member.send(f"Hey! How are you doing! Have you been taking care of yourself lately?")
@@ -57,11 +54,8 @@ class Timed(commands.Cog):
                 case 7:
                     await member.send("Whoop unrelated but just wanted to tell you a joke hehe")
                     await member.send("What happens when two pieces of bread play chess for too long?")
-                    time.sleep(5)
                     await member.send("They have a STALEmate! :D ")
                     await member.send(file=discord.File('cogs/images/Excited_elle.png'))
-
-
 
     
 def setup(bot):  # this is called by Pycord to setup the cog
